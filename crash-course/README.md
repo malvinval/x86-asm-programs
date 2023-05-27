@@ -1,3 +1,38 @@
+## Four steps of compilation
+
+1. Preprocessing
+2. Compiling
+3. Assemble
+4. Linking
+
+![compilation-steps](./img/compilation-steps.png)
+
+## Instruction Format
+
+`<opcode> <operand_list>`
+
+The operand list includes source and destination
+
+> In AT&T syntax, the last operand is destination.
+
+> In Intel syntax, the last operand is source.
+
+## Common x86_64 Opcodes
+
+![common-opcodes](./img/common-opcodes.png)
+
+## Data Types
+
+![data-types](./img/data-types.png)
+
+Example:
+
+```asm
+movq rbp, rax ; q suffix stands for quadword
+```
+
+movq : move a 64-bit (quadword) integer.
+
 ## Sections
 
 We will have 3 sections in our program:
@@ -23,7 +58,11 @@ So, it depends on your linker.
 
 ## Registers
 
-Registers is hardware implemented variables.
+Registers is hardware implemented variables. It's a place where processor store things.
+
+**GENERAL PURPOSE REGISTERS**
+
+![gpregs](./img/general-purpose-regs.png)
 
 ![regs](./img/x86-registers.png)
 
